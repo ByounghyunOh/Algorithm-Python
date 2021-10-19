@@ -12,6 +12,7 @@ Mapping Type |	dict ||
 Set Types |	set ||
 Boolean Type |	bool | True, False (Capital letter on Fist)|
 Binary Types |	bytes ||
+
 <br><br>
 
 ### Data Type (Collection )
@@ -21,6 +22,7 @@ List  |  []  | ['e', 3, 4, 'test']
 Dictionary | {key:value} |  {'1':'orange', '2','red'} |
 Set | {} | {'orange', 'red'} |
 Tuple | () | ('orange', 'red'), **Immutable** |
+
 <br><br>
 
 
@@ -121,6 +123,7 @@ Operator | Description | Note
 ---  | --- | ---
 ** | power | same as ^
 // | quotient | 5//2 = 2, 5/2 = 2.5
+
 <br><br>
 
 
