@@ -42,7 +42,7 @@ Method | Description | Note
 ---  | --- | ---
 lower() | Converts a string into lower case ||
 upper()	| Converts a string into upper case ||
-join() | Iterate concat | x = '#'.joint([1,2,3])
+join() | Iterate print into one sting, such as list | x = '#'.joint(['a','b','c'])
 isalnum() | [a-zA-z0-9]| Return True/False
 isalpha() | [a-zA-z] | | Return True/False
 isnumeric() |[0-9] | Return True/False
@@ -169,3 +169,25 @@ Type | Description | Note
 % | old  | print('%d + %d = %d' % (a,b,a+b))
 format() | common | print('{0} * {1} = {2}'.format(a, b, a*b))
 f-String | Python3.6~ | print(f'{a} * {b} = {a*b}')
+
+<br><br>
+
+
+### RegEx
+  * import re
+  
+Function | Description | Note 
+---  | --- | ---
+sub() | Replaces one or many matches with string | re.sub('regex', 'replace', string)
+
+
+```Python
+import re
+s = 'Python the best!!!'
+
+# ^ means Not, a-zA-z0-9 is range of regex, '' is what is will be replace.
+# If s is not in [a-zA-Z0-9], replace with '' (same as removed)
+s = re.sub('[^a-zA-z0-9]', '', s)  
+print(s)
+>> Pythonthebest  # Replaced all space, special chars with nothing(=Removed)
+``` 
