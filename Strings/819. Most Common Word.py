@@ -41,7 +41,7 @@ def mostCommonWord2(paragraph: str, banned: list) -> str:
 
     # Most common
     return count.most_common(1)[0][0]
-
+    
 print(mostCommonWord2(paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.", banned = ["hit"]))
 print(mostCommonWord2("Bob. hIt, baLl", ["bob", "hit"]))
 print(mostCommonWord2("a, a, a, a, b,b,b,c, c",["a"]))
