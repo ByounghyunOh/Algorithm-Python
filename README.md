@@ -152,13 +152,15 @@ values() | Returns keys and values | dict.values()
 
 
 ### collections 
-Data type | Description | Method
+Data type | Description 
 --- | ---
-deque |  list-like container with fast appends and pops on either end, O(1) |
+deque |  list-like container with fast appends and pops on either end, O(1) 
 
 **deque**
-* Kinds of double-ended queue that can be queue and stack
+  - Kinds of double-ended queue that can be queue and stack
+
 Method | Description
+--- | ---
 pop()  | Remove and return an element from the right side of the deque, pop(index)
 popleft() | Remove and return an element from the left side of the deque
 append() | Same as list
