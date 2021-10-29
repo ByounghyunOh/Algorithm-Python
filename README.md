@@ -151,6 +151,23 @@ values() | Returns keys and values | dict.values()
 <br><br>
 
 
+### collections 
+Data type | Description | Method
+--- | ---
+deque |  list-like container with fast appends and pops on either end, O(1) |
+
+**deque**
+* Kinds of double-ended queue that can be queue and stack
+Method | Description
+pop()  | Remove and return an element from the right side of the deque, pop(index)
+popleft() | Remove and return an element from the left side of the deque
+append() | Same as list
+count(x) | Count the number of deque elements equal to x
+
+* Reference - [python.org](https://docs.python.org/3/library/collections.html#module-collectionsp)
+<br><br>
+
+
 ### Operation
 * No short form increment/decrement operator exist in Python, such as ++i or --i
 * Most of operators are same as other language
