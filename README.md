@@ -1,6 +1,6 @@
 # Python Basic
 
-### Data type (basic only)
+## Data type (basic only)
 Built-in by default, dynamically type(likes JavaScript)
 
  Type | Name |Note
@@ -15,7 +15,7 @@ Binary Types |	bytes |
 
 <br><br>
 
-### Data Type (Collection )
+## Data Type (Collection )
  Name | Use | Note
 ---   | ---  | ---
 List  |  []  | ['e', 3, 4, 'test']
@@ -26,7 +26,7 @@ Tuple | () | ('orange', 'red'), **Immutable**
 <br><br>
 
 
-### Built in Functions
+## Built in Functions
 Name | Description | Note 
 ---  | --- | ---
 range() | returns a sequence of items | range([start,]stop[,step]) 
@@ -38,7 +38,7 @@ map() |  function for each item in an iterable | map(function, iterables)
 * Reference - [W3School](https://www.w3schools.com/python/python_ref_functions.asp)
 <br><br>
 
-#### Sorting 
+### Sorting 
 Function name| Description
 --- | ---
 sorted() | **Any** iterable, **Return** new sorted data (data itself is **NOT** sorting)
@@ -69,7 +69,7 @@ student_tuples = [
 <br>
 
 
-### String Methods
+## String Methods
 Name | Description | Note 
 ---  | --- | ---
 lower() | Converts a string into lower case |
@@ -90,7 +90,7 @@ split() | Split a string into a list. By default white space is a sperator | str
 * Reference - [W3School](https://www.w3schools.com/python/python_ref_string.asp)
 <br><br>
 
-### List Methods
+## List Methods
 Name | Description | Note 
 ---  | --- | ---
 append() |	Adds an element at the end of the list |
@@ -106,7 +106,7 @@ clear()	| Removes all the elements from the list |
 * Reference - [W3School](https://www.w3schools.com/python/python_ref_list.asp)
 <br>
 
-**List Slicing**
+### List Slicing
 ```python
 # list[start:End(index-1):Step]
 a = [10,20,30,40]
@@ -118,7 +118,7 @@ a = [10,20,30,40]
 [<img src="./img/list_indexing.png" width="350px">](/img/list_indexing.png)
 <br>
 
-**List Comprehension**
+### List Comprehension
 
 ```python
 >>> a = []
@@ -136,7 +136,7 @@ a = [10,20,30,40]
 <br><br>
 
 
-### Dictionary Methods
+## Dictionary Methods
 Method | Description | Note 
 ---  | --- | ---
 update() |Updates the dictionary with the specified key-value pairs |dic.update({key:value}) |
@@ -151,12 +151,12 @@ values() | Returns keys and values | dict.values()
 <br><br>
 
 
-### collections 
+## collections 
 Data type | Description 
 --- | ---
 deque |  list-like container with fast appends and pops on either end, O(1) 
 
-**deque**
+### deque
   - Kinds of double-ended queue that can be queue and stack
 
 Method | Description
@@ -170,7 +170,7 @@ count(x) | Count the number of deque elements equal to x
 <br><br>
 
 
-### Operation
+## Operation
 * No short form increment/decrement operator exist in Python, such as ++i or --i
 * Most of operators are same as other language
 
@@ -182,7 +182,7 @@ Operator | Description | Note
 <br><br>
 
 
-### Loop
+## Loop
 ``` Python
 # Sample 1
 text = 'test'
@@ -217,7 +217,7 @@ while (i < 6):
 ```
 <br><br>
 
-### Print()
+## Print()
 Type | Description | Note 
 ---  | --- | ---
 , | basic |print('name is', name)
@@ -228,7 +228,7 @@ f-String | Python3.6~ | print(f'{a} * {b} = {a*b}')
 <br><br>
 
 
-### RegEx
+## RegEx
   * import re
   
 Function | Description | Note 
@@ -250,7 +250,7 @@ print(s)
 <br><br>
 
 
-### Lambda
+## Lambda
 * Lambda is small anonymous function(or expression) that it can use without define separate function 
 * This is useful when you need to another function inside function without define another function
 ```Python
@@ -271,3 +271,35 @@ def double_Number(nums: list) -> None:
 double_Number([1,2,3,4,5])
 ```
 
+<br><br>
+
+## Linked List
+* Linked list is a data structure which contains data objects which are connected by link
+```Python
+# Class ListNode:
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+# Making linked List(=ListNode) from list
+def make_linked_list(nums: list) -> ListNode:
+    # head hold start cursor of list
+    head = linked_list = ListNode(nums[0])
+    for num in nums[1:]:
+        linked_list.next = ListNode(num)  # linking next ListNode with val 
+        linked_list = linked_list.next  # Move cursor
+    return head # return head cursor
+
+result = make_linked_list([1,2,3,4])
+
+# checking the linked_list created correctly
+prn = ''
+while result:
+    prn += str(result.val) + '->'
+    result = result.next
+print(prn[:-2]) # remove last two char '->'
+>>> 1->2->3->4
+```
+[<img src="./img/linked_list01.png" width="500px">](/img/linked_list01.png)
+<br><br>
