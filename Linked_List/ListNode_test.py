@@ -33,3 +33,28 @@ class recursive:
         return self.ln_list
 rc = recursive()
 print(rc.recursive_list(ln))
+
+print('--- # Making Linked List from list ---')
+# class ListNode:
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+# Making linked List(=ListNode) from list
+def make_linked_list(nums: list) -> ListNode:
+    # head hold start cursor of list
+    head = linked_list = ListNode(nums[0])
+    for num in nums[1:]:
+        linked_list.next = ListNode(num)  # linking next ListNode with val 
+        linked_list = linked_list.next  # Move cursor
+    return head # return head cursor
+
+result = make_linked_list([1,2,3,4])
+
+# checking the linked_list created correctly
+prn = ''
+while result:
+    prn += str(result.val) + '->'
+    result = result.next
+print(prn[:-2])
